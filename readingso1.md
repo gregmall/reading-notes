@@ -14,5 +14,14 @@
 * div is still an important element
 
 #Chapter 18
+* Understand the target audience for a website
+* Sitemaps, wireframes help to plan and organize a site
 
+#Chapter 1 Javascript
+* Objects = things with methods, events and properties
+* Properties = charactaristics with name/value
+* Event- computer saying 'something just happened'
+    -used to trigger code.
+* Methods describe how object interact with the 
+* Write code that uses browser's model of the web page
 
