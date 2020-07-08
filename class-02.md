@@ -1,18 +1,18 @@
 # Chapter 2 Text HTML
 
 * HTML has 6 levels of headings *
-   " <h1><h2><h3><h4><h5><h6>"
-  // " <b> - bold <i>-italic <sup>-superscript <sub>-subscript"
-   // " <abbr>-abbreviation <cite>-cite <dfn>-define instance"
-   //" <address>-contains address info <ins>insert (underlined)"
-   // "<del>-delete (line through) "
+   - h1 h2 h3 h4 h5 h6 
+   -  b  - bold i -italic sup -superscript sub -subscript"
+   - abbr -abbreviation cite -cite dfn -define instance"
+   - address -contains address info ins insert (underlined)"
+   - del -delete (line through) "
 
 # Chapter 10 HTML
 
 * CSS - think of a box around HTML elements.  CSS controls rules of each box
 
 * Using external CSS
-    -<link>-where to find the CSS file
+    -<link -where to find the CSS file
     -<href>-path to CSS file.
     -<type>-type of document being linked to  ("text/css")
     -<rel>-specifies the relationship between HTML page and file linked to
