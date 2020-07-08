@@ -2,10 +2,10 @@
 
 * HTML has 6 levels of headings *
   - <h1><h2><h3><h4><h5><h6>
-* <b> - bold <i>-italic <sup>-superscript <sub>-subscript
-  <abbr>-abbreviation <cite>-cite <dfn>-define instance
-  <address>-contains address info <ins>insert (underlined)
-  <del>-delete (line through) 
+* // <b> - bold <i>-italic <sup>-superscript <sub>-subscript
+   // <abbr>-abbreviation <cite>-cite <dfn>-define instance
+   // <address>-contains address info <ins>insert (underlined)
+   // <del>-delete (line through) 
 
 # Chapter 10 HTML
 
