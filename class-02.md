@@ -61,26 +61,4 @@
         -comparison ( >  <)
         -logical (&& ||)
 
-# Chapter 4 JAVASCRIPT
-
-* comparison operators at basic level return a true fale
-
-* If statement
-    -checks a condition.  If true, first block of code is executed
-    -if false, the second block of code is executed
-
-* Switch statement
-    -checks each condition.  if true it stops the run. if not true a default is run
-    -easier on computer memory
-
-* For loop
-    -checks condition then runs the code
-
-* While loop
-    -runs while the condition remains true
-
-* Do loop
-    -runs at least once before checking condition
-    
-
 
