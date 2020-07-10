@@ -46,5 +46,49 @@
     - box offset property is used to control where fixed position appears
 
 * Overlapping elements
-    - 
+    - z-index sometimes referred to as **stacking context**
+    - controls which elements sit on top when overlapping
+    - the higher the number, the closer the element is to the front
 
+* Floating elements
+    - float: right/left
+    - take an element in normal flow and place it as far to the left/right of the containing element as possible
+    - anything else in the element will flow around the floated element
+    - should also specify width to indicate how wide floated element will be
+    - can create multi column layouts with float using, width, float and margin
+
+* Fixed width layout
+    - usually specified in pixels
+    - will stay the same no matter the size of the browser
+
+* Liquid layout
+    - uses percentages so the width will stretch to fit the size of the screen
+
+* Layout grid
+    -960 pixel wide 12 column grid
+
+* Multiple style sheets
+    - modular approach: create separate stylesheets to control typography, layout, forms, tables, etc.
+    - use '@import' rule to import each stylesheet
+
+
+# Chapter 3 JAVASCRIPT Function, Methods, Objects
+
+* Function
+    - series of statments put together to perform a task
+    - information passed into fucntions is called **Parameters**
+    - functions are expected to return a **value**
+    - See pgs 92-95
+    - a **function declaration** creates a function you can call
+    - a function treated as an expressing is called a **function expression**
+    - a function with no name is called an **anonymous function**
+    - Immediatley Invoked Function Expression 'IIFE' 'iffy'
+        - executed once as interpreter comes across them.
+        - used: 1. As an argument when a fucntion is called 'to calculate a value for that function'
+                2. To assign the value of a property to an object
+                3. In event handlers and listeners to perform a task when an event occurs.
+                4. To prevent conflicts between two scripts that might use the same variable names.
+* Variable scope
+    - local variable = variable declared inside a function
+    - global variable = variable declared outside a fuction
+        - require more memory
