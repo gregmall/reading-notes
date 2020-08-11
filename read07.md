@@ -10,3 +10,7 @@ HTTP is a general purpose protocol for applying 'nouns' to 'verbs'
 
 - lots of technical stuff here.  Skimmed through it.  Kinda makes sense.  Hoping to get some hands-on experience to get a better understanding of it.  
 - for more reference: https://visionmedia.github.io/superagent/
+
+# API Keys
+
+* went through them all and got signed up and received an API from all but yelp
