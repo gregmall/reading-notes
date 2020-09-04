@@ -63,9 +63,10 @@
 10. Array.of()
     - creates an array from every argument passed into it.
     example:
+```
   const nums = Array.of(1, 2, 3, 4, 5, 6);
   console.log(nums); // output: [1, 2, 3, 4, 5, 6]
-
+```
 # Array Method Cheat sheet
  * Super nice cheat sheet of array methods.  I have printed it and will use it for reference. 
 
