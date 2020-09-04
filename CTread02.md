@@ -11,6 +11,7 @@
 3. filter()
     -  creates a new array with only elements that pass the condition in the provided function.
     example:   
+    ```
     const arr = [1, 2, 3, 4, 5, 6];
 
   // item(s) greater than 3
@@ -18,15 +19,18 @@
   console.log(filtered); // output: [4, 5, 6]
 
   console.log(arr); // output: [1, 2, 3, 4, 5, 6]
+  ```
 4. map()
     - creates new array by calling the provided function in every element
 5. reduce()
     - applies a function against an accumulator and each element in the array to reduce it to a single value
     example:
+    ```
       const arr = [1, 2, 3, 4, 5, 6];
 
   const sum = arr.reduce((total, value) => total + value, 0);
   console.log(sum); // 21
+  ```
 6. some()
     - checks if at least one of the array's items passed the condition.
     - returns true or false
@@ -40,7 +44,7 @@
     - especially when working with DOM
     - result allows for use of other methods (reduce,map,filter,etc)
     example:
-
+```
   const name = 'frugence';
   const nameArray = Array.from(name);
 
@@ -55,7 +59,7 @@
   // is true array?
   console.log(Array.isArray(lis)); // output: false
   console.log(Array.isArray(lisArray));  // output: true
-
+```
 10. Array.of()
     - creates an array from every argument passed into it.
     example:
@@ -68,6 +72,7 @@
 # Class Syntax
 
 * Basic syntax:
+```
 class MyClass {
   // class methods
   constructor() { ... }
@@ -76,9 +81,11 @@ class MyClass {
   method3() { ... }
   ...
 }
+```
 - use new MyClass() to creat new object with all the listed methods
 - constructor() method is called automoatically by 'new'
 example:
+```
  class MyClass {
   // class methods
   constructor() { ... }
@@ -87,6 +94,7 @@ example:
   method3() { ... }
   ...
 }
+```
 
 * What is a class?
 - a class is a kind of function
@@ -96,6 +104,7 @@ class User {
 }
 
 // class is a function
+```
 alert(typeof User); // function
 
 // ...or, more precisely, the constructor method
@@ -106,19 +115,22 @@ alert(User.prototype.sayHi); // alert(this.name);
 
 // there are exactly two methods in the prototype
 alert(Object.getOwnPropertyNames(User.prototype)); // constructor, sayHi
-
+```
 * Class expression
 - classes can be defined inside another expression, passed around, assigned, etc.
 example:
+```
 let User = class {
   sayHi() {
     alert("Hello");
   }
 };
+```
 
 * Getters/setters
 - classes may include getters/setters, computed properties
 example:
+```
 class User {
 
   constructor(name) {
@@ -144,10 +156,11 @@ let user = new User("John");
 alert(user.name); // John
 
 user = new User(""); // Name is too short.
-
+```
 * Computed names [...]
 - computed method name using brackets
 example:
+```
 class User {
 
   ['say' + 'Hi']() {
@@ -157,10 +170,11 @@ class User {
 }
 
 new User().sayHi()
-
+```
 * Class fields
 - syntax that allows to add any properties
 example:
+```
 class User {
   name = "John";
 
@@ -170,9 +184,10 @@ class User {
 }
 
 new User().sayHi(); // Hello, John!
-
+```
 * Summary
 - basic class syntax looks like this:
+```
  class MyClass {
   prop = value; // property
 
@@ -188,7 +203,7 @@ new User().sayHi(); // Hello, John!
   [Symbol.iterator]() {} // method with computed name (symbol here)
   // ...
 }
-
+```
 # Classes MDN
 * Classes are a template for creating objects
 - encapsulate data with code to work on that data
@@ -219,7 +234,7 @@ new User().sayHi(); // Hello, John!
 * Species
 - lets you override default constructors
 example:
-
+```
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
   static get [Symbol.species]() { return Array; }
@@ -230,7 +245,7 @@ let mapped = a.map(x => x * x);
 
 console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array);   // true
-
+```
 * Super class calls with super
 - used to call corresponding methods of super class
 
