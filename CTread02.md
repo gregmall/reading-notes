@@ -11,7 +11,7 @@
 3. filter()
     -  creates a new array with only elements that pass the condition in the provided function.
     example:   
-    ```
+```
     const arr = [1, 2, 3, 4, 5, 6];
 
   // item(s) greater than 3
@@ -25,12 +25,12 @@
 5. reduce()
     - applies a function against an accumulator and each element in the array to reduce it to a single value
     example:
-    ```
+```
       const arr = [1, 2, 3, 4, 5, 6];
 
   const sum = arr.reduce((total, value) => total + value, 0);
   console.log(sum); // 21
-  ```
+```
 6. some()
     - checks if at least one of the array's items passed the condition.
     - returns true or false
