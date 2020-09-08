@@ -69,7 +69,7 @@ VALUES('https://www.postgresqltutorial.com','PostgreSQL Tutorial');
 ```
 # PostgreSQL SELECT
 * syntax of **SELECT** statement:
-```
+  nb
 - **SELECT** statement to find the first names of all customers from the customer table:
 ```
 SELECT first_name FROM customer;
