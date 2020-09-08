@@ -130,6 +130,7 @@ WHERE condition;
 DELETE FROM table_name
 WHERE condition
 RETURNING (select_list | *)
+```
 * example table:
 ```
 DROP TABLE IF EXISTS links;
