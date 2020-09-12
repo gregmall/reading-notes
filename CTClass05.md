@@ -180,7 +180,7 @@ nightmare
 	.catch((error) => {
 		console.error('Search failed:', error)
 	})
-    ```
+```
 
 # Document.querySelector()
 * The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned.
@@ -211,4 +211,4 @@ elementList = parentNode.querySelectorAll(selectors);
 - Exceptions
     - SyntaxError
         - The syntax of the specified selectors string is not valid.
-        
+
