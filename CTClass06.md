@@ -99,11 +99,12 @@ const myFirstQueue = new Bull('my-first-queue');
 myFirstQueue.process(async (job) => {
   return doSomething(job.data);
 });
+
 ```
-    - process function will be called every time the worker is idling and there are jobs to process in the queue
-    - process will be kept busy processing jobs one by one until all of them are done
-    - providing progress information to an external listener can be accomplished by using progress method on the job object:
-    - example:
+ - process function will be called every time the worker is idling and there are jobs to process in the queue
+ - process will be kept busy processing jobs one by one until all of them are done
+ - providing progress information to an external listener can be accomplished by using progress method on the job object:
+ - example:
 ```
 myFirstQueue.process( async (job) => {
   let progress = 0;
