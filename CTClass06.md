@@ -152,7 +152,7 @@ queue.on('global:completed', jobId => {
   console.log(`Job with id ${jobId} has been completed`);
 })
 ```
-## **Queue Options
+## **Queue Options**
 * **Rate Limiter**
     - limit the number of jobs processed in a unit of time
     - example:
