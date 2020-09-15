@@ -67,7 +67,7 @@
     - there is a complicated example in the reading.  Link follows: [FIFO](https://redislabs.com/ebook/part-2-core-concepts/chapter-6-application-components-in-redis/6-4-task-queues/6-4-1-first-in-first-out-queues/)                                                               
 
 # Bull Quickstart
-* Bull is a NOde library that implements a fast and robust queue system based on redis
+* Bull is a Node library that implements a fast and robust queue system based on redis
 
 * **Getting Started**
 ```
