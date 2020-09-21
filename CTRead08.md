@@ -49,7 +49,9 @@
     - **503** - Service Unavailable
 
 ** Request and Response Message Formats
+
 ![details](/assets/http1-req-res-details.png)
+
 
 - **General Headers**
 - general headers are shared by both request and response messages
