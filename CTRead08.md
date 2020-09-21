@@ -48,7 +48,7 @@
     - **501** - NOt Implemented
     - **503** - Service Unavailable
 
-** Request and Response Message Formats
+**Request and Response Message Formats**
 
 ![details](/assets/http1-req-res-details.png)
 
