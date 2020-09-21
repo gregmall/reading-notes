@@ -4,8 +4,10 @@
 ## HTTP Basics
 - HTTP allows for communication between a variety of hosts and clients, and supports a mixture of network configurations.
 - communication corrurs via **request/response pair**
+
 **URLs**
 - Uniform Resource Locators
+
   ![structure image](/assets/http1-url-structure.png)
 
 **Verbs**
@@ -102,6 +104,17 @@
 
 * JQuery Ajax
 - Ajax API provides the opposite of server-side framework.  Allows you to read response messages and modify request messages.
+
+# How DNS Works
+* fun comic that helps to explain DNS
+* Summary of some points:
+- Computers and other devices communicate using IP addresses to identify each other on the internet.
+- The domain name system (DNS) brings the two together and gets you to your destination.
+- The resolver server is usually your ISP (Internet Service Provider). All resolvers must know one thing: where to locate the root server
+- The root server knows where to locate the .COM TLD server. TLD stands for Top-Level Domain.
+- root server is just one of the 13 root name servers that exist today
+- They are scattered around the globe and operated by 12 independent organizations.
+- The coordination of most top-level domains (TLDs) belong to the Internet Corporation for Assigned Names and Numbers (ICANN)
 
 
 
