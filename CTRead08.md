@@ -6,7 +6,7 @@
 - communication corrurs via **request/response pair**
 **URLs**
 - Uniform Resource Locators
-  !(/assets/http1-url-structure.png)
+  ![structure image](/assets/http1-url-structure.png)
 
 **Verbs**
 
@@ -47,7 +47,7 @@
     - **503** - Service Unavailable
 
 ** Request and Response Message Formats
-!(/assets/http1-req-res-details.png)
+![details](/assets/http1-req-res-details.png)
 
 - **General Headers**
 - general headers are shared by both request and response messages
