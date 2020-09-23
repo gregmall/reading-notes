@@ -5,6 +5,18 @@
 * models with sensitive data should **NEVER** be sent to client applications
 
 # Cryptography
+* the science which studies methods for encoding messages so that they can be read only by a person who knows the secret information needed to decode called a 'key'
+* includes cryptanalysis, the science of decoding encrypted messages without possessing the proper key and has several branches
+<https://gcide.gnu.org.ua/>
+
+# Hash Algorithms
+* takes a piece of data and produces a hash that is deliberately difficult to reverse
+* often used for checking the integrity of data
+* in a user model, a hash password can be stored when the user signs up
+* when they log in they can resend their password and the server can hash the login password with the same hash algorithm.
+* server compares with previously stored hash to determine authentication
+
+# Cypher Algorithms
 * Cryptographic Cypher Algorithm takes a piece of data and a key and produces encrypted data.
 * Data can later be reversed using the same key
 * User tokens can be created associating a random string with a user account
