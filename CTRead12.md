@@ -35,5 +35,5 @@
   - crypt runs key schedule  performing key derivation to derive a set of subkeys from a primay key
 - phase 2
   - magic value is encrypted 64 times useing eksblowfish in ECB mode with the state from previous phase
-![bcrypt example]</assets/bcrypt-algo.png>
+![bcrypt example](/assets/bcrypt-algo.png)
 
