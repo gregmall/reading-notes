@@ -107,6 +107,28 @@ bcrypt
   - they really want you to sign up for an Auth0 account.  Im sure they'll ask for a credit card number
 
 # Token Storage
+
 * Here is a good image of how this works
+
 ![token storage](/assets/in-memory-token-storage.png)
+
+* **Traditional web app scenarios**
+  - If your app needs to call APIs on behalf of the user, access tokens and (optionally) refresh tokens are needed.
+  - use the following flow types:
+    - Authorization Code Flow
+    - Regular Web App Quickstarts
+* **Native/Mobile app scenarios**
+  - Store tokens in a secure storage that the OS offers and limit access to that storage.
+  - Use the following flow types in these scenarios:
+      - Authorization Code Flow with Proof Key for Code Exchange
+      - Save and Renew Tokens for Android
+      - Save and Renew Tokens for Swift
+      - Native/Mobile Apps Quickstarts
+* **Single-page app scenarios**
+  - When the SPA calls multiple APIs that reside in a different domain, access, and optionally, refresh tokens are needed.
+  - Browser in memory
+    - store tokens in browser memory.  Most secure option
+  - Browser local storage
+    - Using browser local storage can be a viable alternative to mechanisms that require retrieving the access token from an iframe and to cookie-based authentication across domains when these are not possible due to browser restrictions
+
 
