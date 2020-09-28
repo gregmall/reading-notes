@@ -105,3 +105,8 @@ bcrypt
 * Can minimize the overhead of hashing salting and password management with Auth0
 * Auth0 helps prevent critical identity data from falling into the wrong hands
   - they really want you to sign up for an Auth0 account.  Im sure they'll ask for a credit card number
+
+# Token Storage
+* Here is a good image of how this works
+![token storage](/assets/in-memory-token-storage.png)
+
