@@ -13,8 +13,10 @@
 ### **Pipeline Operators and Indexes**
 **$match**
   -The *$match* stage can use an index to filter documents if it occurs at the beginning of a pipeline.
+
 **$sort**
   - The *$sort* stage can use an index as long as it is not preceded by a *$project*, *$unwind*, or *$group* stage.
+  
 **$group**
   - The *$group* stage can sometimes use an index to find the first document in each group if all of the following criteria are met:
 
