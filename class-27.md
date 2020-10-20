@@ -367,3 +367,57 @@ class Greeting extends React.Component {
 # Components and Props
 * Components let you split the UI into independent, reusable pieces, and think about each piece in isolation
 ## Function and Class Components
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+- class defined 
+```
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+- The above two components are equivalent from React’s point of view
+## Rendering a Component
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+## Composing Components
+- Components can refer to other components in their output
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
+## Extracting Components
+ * Basically, we can extract components in nested divs in React to simplify 
+ ## Props are Read-Only
+ * Whether you declare a component as a function or a class, it must never modify its own props
+
+# Handling Events
