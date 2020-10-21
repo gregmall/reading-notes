@@ -12,4 +12,237 @@
   - Describes how to implement particular aspects of the components or the relationships between them using the features of a given language
 ## Some major Architectural Patterns and Architectural Patterns Styles
 * **Layered**
+- Four layers
+  - Presentation layer or UI layer
+  - Application layer or Service layer
+  - Business logic layer or Domain layer
+  - Data access layer or Persistence layer
+* **Event Driven**
+- organizes a system around the production, detection and consumption of events
+- event Emitter
+  - event source and only knows that the event has occurred
+- event Consumer
+  - subscribe to an event manager receives notifications when events are emitted and forward events to all registered Consumers
+* **Domain Driven Design**
+- software based on the Business Domain, its elements and behaviors, and the relationships between them
+- eases communication and improves flexibility
+* **Pipes and Filters**
+- Filter transforms the data it receives through Pipes with which it is connected
+- Pipe is some kind of connector that passes data from one Filter to the next
+* **Microservices**
+- create several tiny programs
+- requires every service to be completely independent of the others
+# Container and Presentation Pattern
+* The container and presentation pattern splits code into two distinct places:
+  - containers : are stateful components that contain your business login
+  - presentations : are stateless components that present your data
+### Containers
+* they manage state, fetch data from APIs, setup event handlers, and pass information to other components via props
+### Presentations
+* receive props and use those props to render and style DOM.
+```
+my-app
+└── src
+    ├── assets
+    │   └── myImg.png
+    ├── components
+    │   ├── ComponentName
+    │   │   ├── ComponentName.css
+    │   │   ├── ComponentName.jsx
+    │   │   └── ComponentName.test.jsx
+    ├── containers
+    │   ├── ContainerName
+    │   │   ├── ContainerName.jsx
+    │   │   └── ContainerName.test.jsx
+    ├── services
+    │   └── myService.js
+    └── index.jsx
+```
+# Container Component Details
+* responsible for specifying how a section of an application works.
+  - they manage state, fetch data from apis and set up event handlers
+### Class Containers
+* Class container components are created by extending the react Component class.
+```
+import React, { Component } from 'react';
 
+export default class MyContainer extends Component {
+
+}
+```
+* **initializing state**
+- done in 2 ways
+  - class properties
+```
+import React, { Component } from 'react';
+
+export default class MyContainer extends Component {
+  state = {
+    someStateField: ''
+  }
+}
+```
+  - inside a constructor
+```
+import React, { Component } from 'react';
+
+export default class MyContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      someStateField: ''
+    };
+  }
+}
+```
+* **Setting State**
+- use this.setState
+- independent state change:
+```
+import React, { Component } from 'react';
+
+export default class MyContainer extends Component {
+  state = {
+    someStateField: ''
+  }
+
+  updateSomeState = newSomeState => {
+    this.setState({ someStateField: newSomeState });
+  }
+}
+```
+- Dependent state change:
+```
+import React, { Component } from 'react';
+
+export default class MyContainer extends Component {
+  state = {
+    count: 0
+  }
+
+  incrementCount = (by = 1) => {
+    this.setState(state => ({ count: state.count + by }));
+  }
+}
+```
+* **fetching date**
+- using componentDidMount
+```
+import React, { Component } from 'react';
+import { fetchData } from 'src/services/api.js'
+
+export default class MyContainer extends Component {
+  state = {
+    myData: []
+  }
+
+  componentDidMount() {
+    fetchData()
+      .then(myData => this.setState({ myData }));
+  }
+}
+```
+- using componentDidUpdate
+```
+import React, { Component } from 'react';
+import { fetchData } from 'src/services/api.js'
+
+export default class MyContainer extends Component {
+  state = {
+    page: 1,
+    myData: []
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.page !== this.state.page) {
+      fetchData(this.state.page)
+        .then(myData => this.setState({ myData }));
+    }
+  }
+}
+
+## Functional Containers with Hooks
+
+Functional container components can also be written by utilizing react hooks.
+
+ ```js
+import React from 'react'
+
+const MyContainer = () => {
+
+}
+
+export default MyContainer;
+```
+* **Initializing state**
+- useState
+```
+import React, { useState } from 'react'
+
+const MyContainer = () => {
+  const [someState, setSomeState] = useState('');
+}
+
+export default MyContainer;
+```
+* **Setting State**
+- independent state change
+- setSomeState
+```
+import React, { useState } from 'react'
+
+const MyContainer = () => {
+  const [someState, setSomeState] = useState('');
+
+  const handleChange = ({ target }) => setSomeState(target.value);
+}
+
+export default MyContainer;
+```
+- dependent state change
+- someState
+```
+import React, { useState } from 'react'
+
+const MyContainer = () => {
+  const [count, setCount] = useState('');
+
+  const increment = (by = 1) => setCount(oldCount => oldCount + by);
+}
+
+export default MyContainer;
+```
+* **Fetching Data**
+- useEffect
+```
+import React, { useState, useEffect } from 'react'
+import { fetchData } from 'src/services/api.js'
+
+const MyContainer = () => {
+  const [myData, setMyData] = useState([]);
+
+  useEffect(() => {
+    fetchData()
+      .then(data => setMyData(data));
+  }, []);
+}
+
+export default MyContainer;
+```
+### Containers as Hooks
+* containers can be written as custom hooks:
+```
+import { useState, useEffect } from 'react'
+import { fetchData } from 'src/services/api.js'
+
+const useMyContainerHook = () => {
+  const [myData, setMyData] = useState([]);
+
+  useEffect(() => {
+    fetchData()
+      .then(data => setMyData(data));
+  }, []);
+
+  return myData;
+}
+```
