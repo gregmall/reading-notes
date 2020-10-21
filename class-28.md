@@ -1,6 +1,6 @@
 # Architectural Styles and Architectural Patterns
 * purpose of *Architectural Patterns* is to understand how the major parts of a system fit together and how messages and data flow through the system
- ## **Architectural Patterns VS Design Patterns
+ ## Architectural Patterns VS Design Patterns
   - *Design Patterns* impact a specific section of the code base
   - *Architectural Patterns* are high-level strategies that concern large-scale components, the global properties and mechanisms of a system
  ## **Styles and Patterns**
