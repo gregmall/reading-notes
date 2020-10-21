@@ -246,3 +246,53 @@ const useMyContainerHook = () => {
   return myData;
 }
 ```
+# Presentation Details
+* responsible for specifying how a section of our page looks
+### Creating A Presentation Component
+* written as functional components
+  - return the markup that is going to get rendered to the DOM
+```
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const MyPresentationalComponent = () => (
+  <section>
+    <h1>My Presentational Component</h1>
+    <p>Is great!</p>
+  </section>
+);
+
+export default MyPresentationalComponent;
+```
+- pass props into our presentational components in order to make them reusable
+```
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const MyPresentationalComponent = ({ title, body }) => (
+  <section>
+    <h1>{title}</h1>
+    <p>{body}</p>
+  </section>
+);
+
+MyPresentationalComponent = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired
+}
+
+export default MyPresentationalComponent;
+```
+- When we pass props into our component we should use the prop-types package to specify the props our component receives
+# Functional vs Class Components
+### Differences
+* **Syntax**
+- functional component is plain javascript function accepting props and returns a react element
+- class component requires you to extend from react.component and create a render function
+* **State**
+- cannot use setState with functional component
+  - must be passed state through props
+* **Lifecycle Hooks**
+- cannot use in functional components
+# Conditional Rendering
+
