@@ -60,5 +60,15 @@ npm install eslint-plugin-react-hooks --save-dev
 * How to use hooks
   - side by side comparison with class components are the best way to describe hooks
 ![side by side](/assets/beforeandafter.gif)
+* **Five important rules for hooks
+  1. Never call Hooks from inside a loop, condition or nested function
+  2. Hooks should sit at the top-level of your component
+  3. Only call Hooks from React functional components
+  4. Never call a Hook from a regular function
+  5. Hooks can call other Hooks
 
+* useEffect can operate like componentDidMount
+  - can run once or set amount of times
+  - runs whe page renders
+* React Hooks Reducer, similar to the JavaScript Arrays reducer, returns the accumulation of something, React state in our case
 
