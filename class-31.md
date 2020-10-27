@@ -101,7 +101,7 @@ npm i react-fetch-hook
 npm i react-firebase-hooks
 ```
 ### use-onClickOutside hook
-*An outside click is a way to know if the user clicks everything but a specific component
+* An outside click is a way to know if the user clicks everything but a specific component
   - You may have seen this behavior when opening a dropdown menu or a modal or a dropdown list
 ### useIntersectionObserver hook
 * React hook for using intersection observers
